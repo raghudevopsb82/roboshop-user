@@ -1,0 +1,19 @@
+name: User CICD
+run-name: User CICD
+on: [push]
+jobs:
+  ci:
+    uses: raghudevopsb82/github-reusable-actions/.github/workflows/ci.yml@main
+    with:
+      component: user
+
+  deploy:
+    needs: ci
+    uses: raghudevopsb82/github-reusable-actions/.github/workflows/deploy.yml@main
+    with:
+      component: user
+
+
+
+
+
