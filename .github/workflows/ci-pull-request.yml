@@ -1,5 +1,5 @@
-name: Cart CICD - Pull Request
-run-name: Cart CICD - Pull Request
+name: User CICD - Pull Request
+run-name: User CICD - Pull Request
 on:
   pull_request:
     # Sequence of patterns matched against refs/heads
