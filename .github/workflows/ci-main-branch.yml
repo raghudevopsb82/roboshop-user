@@ -1,9 +1,12 @@
-name: User CICD
-run-name: User CICD
-on: [push]
+name: Cart CICD - Main Branch
+run-name: Cart CICD - Main Branch
+on:
+  push:
+    branches:
+      - main
 jobs:
   ci:
-    uses: raghudevopsb82/github-reusable-actions/.github/workflows/ci.yml@main
+    uses: raghudevopsb82/github-reusable-actions/.github/workflows/ci-main-branch.yml@main
     with:
       component: user
       appType: nodejs
@@ -15,6 +18,7 @@ jobs:
     uses: raghudevopsb82/github-reusable-actions/.github/workflows/deploy.yml@main
     with:
       component: user
+
 
 
 
